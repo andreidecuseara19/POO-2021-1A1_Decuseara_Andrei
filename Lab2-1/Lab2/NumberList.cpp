@@ -11,7 +11,15 @@ bool NumberList::Add(int x)
 		return false;
 	else
 	{
-		this->numbers[count] = x;
+		this->numbers[this->count] = x;
 		this->count++;
+	}
+}
+
+void NumberList::Print()
+{
+	for (int i = 0; i < this->count; i++)
+	{
+		cout << numbers[i]<<' ';
 	}
 }
