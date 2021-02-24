@@ -22,4 +22,17 @@ void NumberList::Print()
 	{
 		cout << numbers[i]<<' ';
 	}
+	cout << endl;
+}
+
+void NumberList::Sort()
+{
+	for (int i = 0; i < this->count - 1; i++)
+	{
+		for (int j = 0; j < this->count - 1; j++)
+		{
+			if (numbers[j] > numbers[j + 1])
+				swap(numbers[j], numbers[j + 1]);
+		}
+	}
 }
